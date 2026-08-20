@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StrategyReport",
+  "type": "object",
+  "properties": {
+    "strategy_id": { "type": "string" },
+    "goal": { "$ref": "goal.json" },
+    "hypotheses": {
+      "type": "array",
+      "items": { "$ref": "hypothesis.json" }
+    },
+    "channels": {
+      "type": "array",
+      "items": { "$ref": "channel.json" }
+    },
+    "experiments": {
+      "type": "array",
+      "items": { "$ref": "experiment.json" }
+    },
+    "kpis": {
+      "type": "array",
+      "items": { "$ref": "kpi.json" }
+    },
+    "timeline": { "$ref": "thirty-day-plan.json" },
+    "decision_rules": {
+      "type": "array",
+      "items": { "$ref": "decision-rule.json" }
+    }
+  },
+  "required": ["strategy_id", "goal", "hypotheses", "channels", "experiments", "kpis", "timeline", "decision_rules"]
+}
