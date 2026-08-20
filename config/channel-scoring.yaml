@@ -1,0 +1,20 @@
+weights:
+  icp_fit: 0.20
+  reachability: 0.15
+  intent: 0.15
+  speed: 0.15
+  cost_efficiency: 0.10
+  team_capability: 0.10
+  existing_traction: 0.10
+  competition: -0.05
+channels:
+  outbound_email:
+    base_score: 80
+  linkedin_outbound:
+    base_score: 85
+  seo_content:
+    base_score: 60
+  paid_search:
+    base_score: 70
+  partnerships:
+    base_score: 75
