@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Assumption",
+  "type": "object",
+  "properties": {
+    "assumption_id": { "type": "string" },
+    "metric": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["actual", "benchmark", "assumption", "target"]
+    },
+    "value": { "type": "number" },
+    "source_reference": { "type": "string" },
+    "confidence_score": { "type": "number" },
+    "validated": { "type": "boolean" },
+    "validation_date": { "type": "string" }
+  },
+  "required": ["assumption_id", "metric", "type", "value"]
+}
