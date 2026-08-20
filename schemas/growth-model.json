@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GrowthModel",
+  "type": "object",
+  "properties": {
+    "target_customers": { "type": "integer" },
+    "required_opportunities": { "type": "integer" },
+    "required_meetings": { "type": "integer" },
+    "required_leads": { "type": "integer" },
+    "required_traffic": { "type": "integer" },
+    "conversion_rates": {
+      "type": "object",
+      "properties": {
+        "meeting_to_customer": { "type": "number" },
+        "opp_to_meeting": { "type": "number" },
+        "lead_to_opp": { "type": "number" },
+        "traffic_to_lead": { "type": "number" }
+      }
+    }
+  },
+  "required": ["target_customers", "required_opportunities", "required_leads"]
+}
