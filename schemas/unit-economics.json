@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UnitEconomics",
+  "type": "object",
+  "properties": {
+    "cac": { "type": "number" },
+    "ltv": { "type": "number" },
+    "ltv_to_cac_ratio": { "type": "number" },
+    "payback_period_months": { "type": "number" },
+    "gross_margin_percent": { "type": "number" },
+    "average_contract_value": { "type": "number" },
+    "channel_economics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "channel_cac": { "type": "number" },
+          "conversion_rate": { "type": "number" },
+          "roi": { "type": "number" }
+        },
+        "required": ["channel_cac"]
+      }
+    }
+  },
+  "required": ["cac", "ltv", "ltv_to_cac_ratio", "payback_period_months"]
+}
