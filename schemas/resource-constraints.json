@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ResourceConstraints",
+  "type": "object",
+  "properties": {
+    "team_capacity_fte": { "type": "number" },
+    "weekly_hours_available": { "type": "integer" },
+    "available_budget": { "type": "number" },
+    "time_horizon_days": { "type": "integer" },
+    "sales_capacity": {
+      "type": "object",
+      "properties": {
+        "max_demos_weekly": { "type": "integer" },
+        "max_outreach_weekly": { "type": "integer" }
+      }
+    },
+    "marketing_capacity": {
+      "type": "object",
+      "properties": {
+        "max_campaigns_active": { "type": "integer" },
+        "content_pieces_weekly": { "type": "integer" }
+      }
+    },
+    "technical_capacity": {
+      "type": "object",
+      "properties": {
+        "max_integrations": { "type": "integer" },
+        "dev_hours_weekly": { "type": "integer" }
+      }
+    }
+  },
+  "required": ["available_budget", "time_horizon_days"]
+}
