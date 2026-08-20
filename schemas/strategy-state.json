@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StrategyState",
+  "type": "object",
+  "properties": {
+    "active_goal": { "type": "object" },
+    "current_icp": { "type": "object" },
+    "active_channels": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "active_hypotheses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "running_experiments": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "completed_experiments": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "winning_patterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "failed_patterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "current_bottleneck": { "type": "string" },
+    "current_kpis": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "last_strategy_update": { "type": "string" }
+  },
+  "required": ["active_goal", "active_channels", "active_hypotheses", "current_bottleneck"]
+}
