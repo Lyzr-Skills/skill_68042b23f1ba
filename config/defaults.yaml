@@ -1,0 +1,6 @@
+version: "1.0.0"
+mode: "gtm-strategy"
+log_level: "info"
+deterministic_calculations: true
+allow_hallucinations: false
+quality_gates_enabled: true
