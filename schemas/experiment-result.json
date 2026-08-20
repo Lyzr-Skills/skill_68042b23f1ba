@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExperimentResult",
+  "type": "object",
+  "properties": {
+    "experiment_id": { "type": "string" },
+    "execution_period": {
+      "type": "object",
+      "properties": {
+        "start_date": { "type": "string" },
+        "end_date": { "type": "string" }
+      },
+      "required": ["start_date", "end_date"]
+    },
+    "actual_metrics": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "target_metrics": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "outcome": {
+      "type": "string",
+      "enum": ["scale", "pivot", "iterate", "continue", "kill"]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Learning confidence score from 0.0 to 1.0 based on sample size and execution quality"
+    },
+    "sample_size": { "type": "integer" },
+    "alternative_explanations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "unexpected_results": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "learning": { "type": "string" },
+    "decision": { "type": "string" },
+    "evidence": { "type": "string" }
+  },
+  "required": ["experiment_id", "execution_period", "actual_metrics", "target_metrics", "outcome", "confidence"]
+}
