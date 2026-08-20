@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Channel",
+  "type": "object",
+  "properties": {
+    "channel_id": { "type": "string" },
+    "name": { "type": "string" },
+    "score": { "type": "number" },
+    "primary_funnel_stage": { "type": "string" },
+    "secondary_funnel_stages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "expected_conversion_metrics": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "cost_model": {
+      "type": "object",
+      "properties": {
+        "setup_cost": { "type": "number" },
+        "variable_cost_per_lead": { "type": "number" }
+      }
+    },
+    "reasoning": { "type": "string" }
+  },
+  "required": ["channel_id", "name", "score", "primary_funnel_stage"]
+}
