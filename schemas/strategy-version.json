@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StrategyVersion",
+  "type": "object",
+  "properties": {
+    "version_id": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "reason_for_change": { "type": "string" },
+    "changes_made": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "previous_version_id": { "type": "string" },
+    "state_snapshot": { "type": "object" }
+  },
+  "required": ["version_id", "timestamp", "reason_for_change", "changes_made"]
+}
