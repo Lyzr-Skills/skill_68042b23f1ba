@@ -1,0 +1,7 @@
+formula: "Priority = (Impact * Confidence * Speed) / Effort"
+default_scores:
+  impact: 5
+  confidence: 5
+  speed: 5
+  effort: 5
+minimum_threshold_for_execution: 5.0
