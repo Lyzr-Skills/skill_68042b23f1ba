@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Experiment",
+  "type": "object",
+  "properties": {
+    "experiment_id": { "type": "string" },
+    "hypothesis_id": { "type": "string" },
+    "channel": { "type": "string" },
+    "audience": { "type": "string" },
+    "tactic": { "type": "string" },
+    "success_metric": { "type": "string" },
+    "threshold": { "type": "number" },
+    "duration": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "ready", "running", "paused", "completed", "cancelled"]
+    },
+    "dependencies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "blocked_by": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["experiment_id", "hypothesis_id", "channel", "success_metric", "threshold", "status"]
+}
