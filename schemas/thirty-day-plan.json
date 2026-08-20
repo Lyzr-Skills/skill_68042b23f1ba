@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ThirtyDayPlan",
+  "type": "object",
+  "properties": {
+    "weeks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "week_number": { "type": "integer" },
+          "focus": { "type": "string" },
+          "tasks": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "deliverables": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["week_number", "focus", "tasks"]
+      }
+    }
+  },
+  "required": ["weeks"]
+}
