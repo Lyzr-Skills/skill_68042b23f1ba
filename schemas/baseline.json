@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Baseline",
+  "type": "object",
+  "properties": {
+    "traffic": { "type": "integer" },
+    "leads": { "type": "integer" },
+    "demos": { "type": "integer" },
+    "opportunities": { "type": "integer" },
+    "customers": { "type": "integer" },
+    "visitor_to_lead_rate": { "type": "number" },
+    "lead_to_demo_rate": { "type": "number" },
+    "demo_to_opp_rate": { "type": "number" },
+    "opp_to_customer_rate": { "type": "number" },
+    "cac": { "type": "number" },
+    "sales_cycle_days": { "type": "integer" },
+    "retention_rate": { "type": "number" },
+    "revenue": { "type": "number" }
+  },
+  "required": ["traffic", "leads", "customers"]
+}
