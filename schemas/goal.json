@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Goal",
+  "type": "object",
+  "properties": {
+    "goal_id": {
+      "type": "string",
+      "description": "Unique identifier for the goal"
+    },
+    "target": {
+      "type": "string",
+      "description": "Qualitative or quantitative target statement"
+    },
+    "metric": {
+      "type": "string",
+      "description": "The primary metric to measure success"
+    },
+    "target_value": {
+      "type": "number",
+      "description": "Target numeric value of the metric"
+    },
+    "deadline": {
+      "type": "string",
+      "description": "Timeframe or target date (e.g., '30 days', '2026-12-31')"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of constraints impacting this goal"
+    }
+  },
+  "required": ["goal_id", "target", "metric", "target_value", "deadline"]
+}
