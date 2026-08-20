@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KPI",
+  "type": "object",
+  "properties": {
+    "kpi_id": { "type": "string" },
+    "name": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["leading", "lagging"]
+    },
+    "current_value": { "type": "number" },
+    "target_value": { "type": "number" },
+    "frequency": { "type": "string" }
+  },
+  "required": ["kpi_id", "name", "type", "target_value"]
+}
