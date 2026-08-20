@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hypothesis",
+  "type": "object",
+  "properties": {
+    "hypothesis_id": { "type": "string" },
+    "statement": { "type": "string" },
+    "evidence": { "type": "string" },
+    "confidence": { "type": "number" },
+    "assumptions": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["hypothesis_id", "statement", "confidence"]
+}
