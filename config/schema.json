@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConfigSchema",
+  "type": "object",
+  "properties": {
+    "version": { "type": "string" },
+    "channel_scoring_weights": {
+      "type": "object",
+      "properties": {
+        "icp_fit": { "type": "number" },
+        "reachability": { "type": "number" },
+        "intent": { "type": "number" },
+        "speed": { "type": "number" },
+        "cost_efficiency": { "type": "number" },
+        "team_capability": { "type": "number" },
+        "existing_traction": { "type": "number" },
+        "competition": { "type": "number" }
+      }
+    },
+    "experiment_scoring_weights": {
+      "type": "object",
+      "properties": {
+        "impact": { "type": "number" },
+        "confidence": { "type": "number" },
+        "speed": { "type": "number" },
+        "effort": { "type": "number" }
+      }
+    }
+  },
+  "required": ["version", "channel_scoring_weights", "experiment_scoring_weights"]
+}
